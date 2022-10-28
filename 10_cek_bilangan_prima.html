@@ -11,12 +11,14 @@
     <script>
  const n = Number(prompt('input salah satu bilangan bulat'));
  let angkaPrima = 1;
+ let pembagi;
  //0 dan satu bukan angka prima
  if(n == 0 || n == 1){
     angkaPrima = 0;    
  }else{
     for(let i=2;i<=n/2;i++){
         if(n%i==0){
+            pembagi = i;
             angkaPrima = 0;
             break;
         }
@@ -24,9 +26,9 @@
  }
 
  if(angkaPrima == 1){
-    document.writeln(`<h1>${n} adalah bilangan prima ${angkaPrima}</h1>`);
+    document.writeln(`<h1>${n} adalah bilangan prima </h1>`);
  }else{
-    document.writeln(`<h1>${n} bukan bilangan prima ${angkaPrima}</h1>`)
+    document.writeln(`<h1>${n} bukan bilangan prima karena bisa dibagi ${pembagi}</h1>`)
  }
     </script>
 </body>
